@@ -12,12 +12,16 @@ export class AddPage extends React.Component {
         super();
         this.htmlEditor = createRef();
         this.handleSave = this.handleSave.bind(this);
+        this.cssEditor = createRef();
+        this.jsEditor = createRef();
 
     }
 
     handleSave(){
         let  formData= new FormData();
         formData.append('html',this.htmlEditor.current.editor.getValue())
+        formData.append('css',this.cssEditor.current.editor.getValue())
+        formData.append('js',this.jsEditor.current.editor.getValue())
 
         fetch("http://1.kuzya19l.beget.tech/addPage",{
             method: 'POST',
@@ -63,6 +67,7 @@ export class AddPage extends React.Component {
                     mode="css"
                     width="100%"
                     theme="vibrant_ink"
+                    ref={this.cssEditor}
                     setOptions={{
                         fontSize:18,
                         enableEmmet:true
@@ -74,6 +79,7 @@ export class AddPage extends React.Component {
                     mode="javascript"
                     width="100%"
                     theme="vibrant_ink"
+                    ref={this.jsEditor}
                     setOptions={{
                         fontSize:18,
                         enableEmmet:true
