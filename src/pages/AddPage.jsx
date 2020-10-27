@@ -26,8 +26,8 @@ export class AddPage extends React.Component {
         formData.append('name',this.state.name);
         formData.append('title',this.state.title);
         formData.append('html',this.htmlEditor.current.editor.getValue())
-        formData.append('css',this.cssEditor.current.editor.getValue())
-        formData.append('js',this.jsEditor.current.editor.getValue())
+        formData.append('css',this.cssEditor.current.editor.getValue());
+        formData.append('js',this.jsEditor.current.editor.getValue());
         fetch("http://1.kuzya19l.beget.tech/addPage",{
             method: 'POST',
             body: formData
