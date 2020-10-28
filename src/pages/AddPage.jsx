@@ -51,6 +51,7 @@ export class AddPage extends React.Component {
 
     render() {
         return <div>
+            <h2 className="my-2 text-center">Добавление страницы сайта</h2>
         <nav>
             <div className="nav nav-tabs" id="nav-tab" role="tablist">
                 <a className="nav-item nav-link active" id="nav-html-tab" data-toggle="tab" href="#nav-html" role="tab"

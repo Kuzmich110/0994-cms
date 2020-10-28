@@ -6,6 +6,7 @@ export const Menu = ()=>{
         <div className="nav flex-column nav-pills" aria-orientation="vertical">
             <NavLink className="nav-link" exact to="/">CMS</NavLink>
             <NavLink className="nav-link" to="/pages/">Страницы сайта</NavLink>
+            <NavLink className="nav-link" to="/branches/">Разделы сайта</NavLink>
         </div>
     </div>
 }
