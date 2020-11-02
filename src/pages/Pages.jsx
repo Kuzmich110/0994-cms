@@ -19,7 +19,7 @@ export class Pages extends React.Component{
     }
 
     componentDidMount() {
-        fetch("http://1.kuzya19l.beget.tech/getPagesJSON")
+        fetch("http://dip.kuzya19l.beget.tech/getPagesJSON")
             .then(response=>response.json())
             .then(pages=>{
                 this.setState({
@@ -32,14 +32,14 @@ export class Pages extends React.Component{
 
     render() {
         return <div>
-
+            <h2 className="my-2 text-center">Список страниц сайта</h2>
             <table className="table table-striped table-hover">
                 <thead>
                 <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Заголовок</th>
-                    <th scope="col">Адрес</th>
-                    <th scope="col">Управление</th>
+                    <th scope="col" class="text-center">ID</th>
+                    <th scope="col" class="text-center">Заголовок</th>
+                    <th scope="col" class="text-center">Адрес</th>
+                    <th scope="col" class="text-center">Управление</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -47,7 +47,7 @@ export class Pages extends React.Component{
                 </tbody>
             </table>
 
-            <NavLink className="btn btn-primary" to="addPage">Добавить страницу</NavLink>
+            <NavLink className="btn btn-primary" to="addPage"><i className="fas fa-plus-square"></i> Добавить страницу</NavLink>
         </div>
     }
 }

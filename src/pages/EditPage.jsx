@@ -22,7 +22,7 @@ export class EditPage extends React.Component{
         this.setState({pageId:pageId})
         let formData = new FormData();
         formData.append('pageId',pageId);
-        fetch("http://1.kuzya19l.beget.tech/getPageByIdJSON",{
+        fetch("http://dip.kuzya19l.beget.tech/getPageByIdJSON",{
             method: 'POST',
             body: formData
 
@@ -48,7 +48,7 @@ export class EditPage extends React.Component{
         formData.append('html',this.htmlEditor.current.editor.getValue())
         formData.append('css',this.cssEditor.current.editor.getValue());
         formData.append('js',this.jsEditor.current.editor.getValue());
-        fetch("http://1.kuzya19l.beget.tech/editPageById",{
+        fetch("http://dip.kuzya19l.beget.tech/editPageById",{
            method: 'POST',
            body: formData
         }).then(response=>response.json())
@@ -71,14 +71,14 @@ export class EditPage extends React.Component{
             <nav>
                 <div className="nav nav-tabs" id="nav-tab" role="tablist">
                     <a className="nav-item nav-link active" id="nav-html-tab" data-toggle="tab" href="#nav-html" role="tab"
-                       aria-controls="nav-html" aria-selected="true">HTML</a>
+                       aria-controls="nav-html" aria-selected="true"><i className="fab fa-html5"></i> HTML</a>
                     <a className="nav-item nav-link" id="nav-css-tab" data-toggle="tab" href="#nav-css" role="tab"
-                       aria-controls="nav-profile" aria-selected="false">CSS</a>
+                       aria-controls="nav-profile" aria-selected="false"><i className="fab fa-css3-alt"></i> CSS</a>
                     <a className="nav-item nav-link" id="nav-js-tab" data-toggle="tab" href="#nav-js" role="tab"
-                       aria-controls="nav-js" aria-selected="false">JS</a>
+                       aria-controls="nav-js" aria-selected="false"><i className="fab fa-js"></i> JS</a>
                     <a className="nav-item nav-link" id="nav-extraHTML-tab" data-toggle="tab" href="#nav-extraHTML" role="tab"
-                       aria-controls="nav-extraHTML" aria-selected="false">Параметры</a>
-                    <button onClick={this.handleSave} className="btn btn-link ml-auto">[Сохранить]</button>
+                       aria-controls="nav-extraHTML" aria-selected="false"><i className="fas fa-align-justify"></i> Параметры</a>
+                    <button onClick={this.handleSave} className="btn btn-link ml-auto"><i className="fas fa-save"></i> Сохранить</button>
                 </div>
             </nav>
             <div className="tab-content" id="nav-tabContent">

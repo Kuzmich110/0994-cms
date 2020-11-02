@@ -30,13 +30,13 @@ export class Branches extends React.Component{
 
     render() {
         return <div>
-
+            <h2 className="my-2 text-center">Список разделов сайта</h2>
             <table className="table table-striped table-hover">
                 <thead>
                 <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Название</th>
-                    <th scope="col">Адрес</th>
+                    <th scope="col" class="text-center">ID</th>
+                    <th scope="col" class="text-center">Название</th>
+                    <th scope="col" class="text-center">Адрес</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -44,7 +44,7 @@ export class Branches extends React.Component{
                 </tbody>
             </table>
 
-            <NavLink className="btn btn-primary" to="addBranch">Добавить раздел сайта</NavLink>
+            <NavLink className="btn btn-primary" to="addBranch"><i className="fas fa-plus-square"></i> Добавить раздел сайта</NavLink>
         </div>
     }
 }
